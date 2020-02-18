@@ -61,15 +61,16 @@
     <script src="js/index.js"></script>
     <script type="text/javascript" src="js/app/model/Negociacao.js"></script>
     <script type="text/javascript">
-        amanha = new Date().setTime(14);
-        n1 = new Negociacao(amanha, 5, 15.0);
+        let amanha = new Date();
+        amanha.setDate(14);
+        let n1 = new Negociacao(amanha, 5, 15.0);
         console.log(n1.data);
         console.log(n1.quantidade);
         console.log(n1.valor);
         console.log(n1.volume);
         n1.quantidade = 10;
         console.log(n1.quantidade);
-        amanha.setTime(15);
+        amanha.setDate(15);
         console.log(n1.data);
 /*        n2 = new Negociacao();
         n2.quantidade = 20;
