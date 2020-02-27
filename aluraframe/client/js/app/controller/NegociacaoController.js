@@ -11,9 +11,12 @@ class NegociacaoController{
 	adiciona(event){
 		event.preventDefault();
 
-		console.log(this.inputData.value);
+		let dataConvertida = new Date(this.inputData.value.replace(/-/g, ','));
+		var negociacao = new Negociacao(dataConvertida, this.inputQuantidade.value, this.inputValor.value);
+		console.log(dataConvertida);
 		console.log(this.inputQuantidade.value);
 		console.log(this.inputValor.value);
+		console.log(negociacao);
 		alert("Chamou controller");
 	}
 }
