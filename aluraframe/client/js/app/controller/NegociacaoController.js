@@ -10,16 +10,14 @@ class NegociacaoController{
 
 	adiciona(event){
 		event.preventDefault();
-
-		let helper = new DateHelper(); 
 		
 		var negociacao = new Negociacao(
-								helper.textoParaData(this.inputData.value), 
+								DateHelper.textoParaData(this.inputData.value), 
 								this.inputQuantidade.value, 
 								this.inputValor.value
 								);
 		console.log(negociacao);
-		console.log(helper.dataParaTexto(negociacao.data));
+		console.log(DateHelper.dataParaTexto(negociacao.data));
 		alert("Chamou controller");
 	}
 }

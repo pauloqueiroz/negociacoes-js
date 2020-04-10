@@ -1,5 +1,8 @@
 class DateHelper{
 	
+	constructor(){
+		throw new Error("Essa classe não pode ser instanciada");
+	}
 
 	// let dataConvertida = new Date(this.inputData.value.replace(/-/g, ','));
 	// let negociacao = new Negociacao(dataConvertida, this.inputQuantidade.value, this.inputValor.value);
@@ -14,7 +17,7 @@ class DateHelper{
 	  * podem ser usadas como construtoras (constructors).
 	  */
 
-	textoParaData(texto){
+	static textoParaData(texto){
 		return new Date(
 				...texto
 					.split("-")
@@ -29,7 +32,7 @@ class DateHelper{
 			);
 	}
 
-	dataParaTexto(data){
+	static dataParaTexto(data){
 		return data.getDate() 
 				+ "/" + (data.getMonth()+1)
 				+ "/" + (data.getFullYear());
